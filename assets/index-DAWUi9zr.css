@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Victor Mono", system-ui;
+
+    user-select: none;
+}
+
+:root {
+    --c0: #111111;
+    --c1: #ccc453;
+
+    --old-c0-elm: #1f7069;
+    --old-c1-keppel: #3b9b90;
+    --old-c2-tradewind: #6fc3b6;
+    --old-c3-sinbad: #a6d9cd;
+    --old-c4-swansddown: #e0f0eb;
+
+    --pc0-white: #ffffff;
+    --pc1-black: #000000;
+    --pc2-dark: #222222;
+    --pc3-dark-lighted: #999999;
+
+    --s0-gap: 5px
+}
+
+/* - - - - - - - */
+
+body {
+  background: var(--c1);
+
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  background: var(--c0);
+}
+
+nav .s1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .s1 img {
+  width: 70px;
+  padding: 15px;
+}
+
+nav .s1 p .name {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--pc0-white);
+  -webkit-text-stroke: 0.5px #fff;
+}
+
+nav .s1 p .dot {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--pc0-white);
+}
+
+nav .s1 p .desc {
+  font-size: 16px;
+  color: var(--pc0-white);
+}
+
+nav .s2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 15px;
+}
+
+nav .s2 span {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--pc0-white);
+}
+
+.catsImages {
+  column-count: 6;
+  column-gap: var(--s0-gap);
+
+  padding: 10px;
+}
+
+.catsImages .image {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: var(--s0-gap);
+}
+
+.catsImages .image img {
+  display: block;
+  width: 100%;
+
+  opacity: 1;
+  animation: appear 1s ease-in-out;
+  transition: 1s;
+
+  /* border-radius: 15px; */
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
